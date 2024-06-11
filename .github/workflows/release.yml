@@ -17,14 +17,14 @@ jobs:
 
       - name: Build project
         run: |
-          python -m compileall ./calculator
+          python -m compileall ./calculator/calculator.py
 
       - name: Create GitHub release
         id: create_release
         uses: actions/create-release@v1
         with:
-          tag_name: ${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
+          tag_name: v${{ github.run_number }}
+          release_name: Release v${{ github.run_number }}
           draft: false
           prerelease: false
         env:
