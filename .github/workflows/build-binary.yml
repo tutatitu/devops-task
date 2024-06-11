@@ -17,4 +17,4 @@ jobs:
 
       - name: Build project
         run: |
-          python -m compile ./calculator
+          python -m compileall ./calculator
